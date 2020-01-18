@@ -1,4 +1,4 @@
-# Data Structures Desiree Morris
+# Data Structures Desiree Morris Is the Best TL
 
 Topics:
  * Queues
