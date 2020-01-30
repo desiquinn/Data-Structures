@@ -56,9 +56,10 @@ class LRUCache:
             # overwrite the old value associated with the key with the new value
             self.storage[key] = value       
         # if the cache is at max capacity
-        if self.current_size == self.capacity:
+        elif self.current_size == self.capacity:
             # remove oldest entry in cache (tail)
-            self.dll.remove_from_tail()
+            deleted = self.dll.remove_from_tail()
+            del self.storage[deleted[0]]
             # add given key value pair to cache to the head
             self.dll.add_to_head((key,value))
             self.storage[key] = value
