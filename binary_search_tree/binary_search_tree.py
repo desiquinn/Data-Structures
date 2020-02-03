@@ -12,7 +12,35 @@ class BinarySearchTree:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        if value < self.value:
+            # print(f"{value} is smaller than {self.value}")
+            if self.left == None:
+                self.left = BinarySearchTree(value)
+                # print(value)
+                # print(self.value)
+                # print(f"add to left {self.left}")
+                # print(self.right)
+            else:
+                # print(value)
+                # print(self.value)
+                # print(self.left)
+                # print(self.right)
+                # print("Something to the left send it back in")
+                self.left.insert(value)
+        else:
+            # print(f"{value} is larger than {self.value}")
+            if self.right == None:
+                self.right = BinarySearchTree(value)
+                # print(value)
+                # print(self.value)
+                # print(self.left)
+                # print(f"add to right {self.right}")
+            else:
+                # print(value)
+                # print(self.value)
+                # print(self.right)
+                # print("Something to the right send it back in")
+                self.right.insert(value)
 
     # Return True if the tree contains the value
     # False if it does not

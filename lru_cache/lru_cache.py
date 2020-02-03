@@ -25,14 +25,14 @@ class LRUCache:
         # if key value pair doesn't exist in self.storage
         if key not in self.storage:
             # return None
-            print(self.storage)
+            # print(self.storage)
             return None
         # if key value pair does exist in self.storage
         else:
             # retrieves value that belongs to key
-            print(self.storage)
+            # print(self.storage)
             node = self.storage[key]
-            print(node)
+            # print(node)
             # value = node.value
             # move key-value pair to the end of the order
             self.dll.remove_from_tail()
